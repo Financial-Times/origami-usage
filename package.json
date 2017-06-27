@@ -33,14 +33,12 @@
     "denodeify": "^1.2.1",
     "dotenv": "^2",
     "http-errors": "^1",
-    "lodash": "^4.17.4",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
     "require-all": "^2",
     "throng": "^4.0.0"
   },
   "devDependencies": {
-    "@financial-times/grafana-tools": "^1.0.0",
     "@financial-times/release-log": "^1.1.2",
     "eslint": "^2",
     "mocha": "^2",
