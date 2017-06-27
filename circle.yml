@@ -1,0 +1,15 @@
+
+machine:
+  node:
+    version: 8
+
+test:
+  override:
+    - make verify
+    - make test
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - make change-request-qa

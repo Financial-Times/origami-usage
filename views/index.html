@@ -1,0 +1,70 @@
+<div class="o-techdocs-container">
+	<div class="o-techdocs-layout">
+		<div class="o-techdocs-main o-techdocs-content">
+			<h1>Check origami usage across FT products</h1>
+
+			{{#if completed}}
+				<p>Scan completed.</p>
+			{{else}}
+				{{#if numberOfDomainsToScan}}
+					<p>Scan currently in progress. {{numberOfDomainsToScan}} still to be scanned. Please refresh the page to view more results</p>
+				{{else}}
+					<p>Scan currently in progress, please refresh the page to view more results.</p>
+				{{/if}}
+			{{/if}}
+			<table class="o-table o-table--row-stripes" data-o-component="o-table">
+				<thead>
+					<tr>
+						<th>Domain</th>
+						<th>Uses <a href="https://registry.origami.ft.com/components/o-footer">o-footer</a></th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/cookies">cookie policy</a></th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/copyright/copyright-policy">copyright policy</a></th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/privacy">privacy policy</a></th>
+						<th>Links to <a href="https://help.ft.com/help/legal/slavery-statement">slavery statement</a></th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/terms-conditions">terms of service</a></th>
+						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Size of page</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#data}}
+					<tr>
+						<td><a href="http://{{domain}}">{{domain}}</a></td>
+						{{#if containsOFooter}}
+							<td>{{containsOFooter}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if oFooterContainsCookies}}
+							<td>{{oFooterContainsCookies}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if oFooterContainsCopyright}}
+							<td>{{oFooterContainsCopyright}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if oFooterContainsPrivacyPolicy}}
+							<td>{{oFooterContainsPrivacyPolicy}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if oFooterContainsSlavery}}
+							<td>{{oFooterContainsSlavery}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if oFooterContainsTermsOfService}}
+							<td>{{oFooterContainsTermsOfService}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{bodyLength}}</td>
+					</tr>
+					{{/data}}
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</div>

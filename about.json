@@ -1,0 +1,73 @@
+{
+	"schemaVersion": 1,
+	"name": "origami-usage",
+	"systemCode": "origami-usage",
+	"purpose": "Display usage metrics about Origami components on Financial Times Group websites.",
+	"audience": "internal",
+	"primaryUrl": "https://origami-usage.in.ft.com/",
+	"serviceTier": "bronze",
+	"dateCreated": "2017-06-27",
+	"contacts": [
+		{
+			"name": "Origami team",
+			"email": "origami.support@ft.com",
+			"rel": "owner",
+			"domain": "All support enquiries"
+		}
+	],
+	"links": [
+		{
+			"url": "https://github.com/Financial-Times/origami-usage/issues",
+			"category": "issues"
+		},
+		{
+			"url": "https://github.com/Financial-Times/origami-usage",
+			"category": "repo"
+		},
+		{
+			"url": "https://dashboard.heroku.com/apps/origami-usage-eu",
+			"category": "deployment",
+			"description": "Heroku dashboard (Production EU)"
+		},
+		{
+			"url": "https://dashboard.heroku.com/apps/origami-usage-qa",
+			"category": "deployment",
+			"description": "Heroku dashboard (QA)"
+		},
+		{
+			"url": "https://dashboard.heroku.com/pipelines/748923ac-b3c0-4289-a0ac-c26b5a7dbe3a",
+			"category": "deployment",
+			"description": "Heroku dashboard (QA > Production pipeline)"
+		},
+		{
+			"url": "http://grafana.ft.com/dashboard/db/origami-usage",
+			"category": "monitoring",
+			"description": "Grafana dashboard"
+		},
+		{
+			"url": "https://my.pingdom.com/newchecks/checks#check=2952910",
+			"category": "monitoring",
+			"description": "Pingdom check (Production EU)"
+		},
+		{
+			"url": "https://github.com/Financial-Times/origami-usage#readme",
+			"category": "documentation",
+			"description": "README"
+		},
+		{
+			"url": "https://sentry.io/nextftcom/origami-usage-product/",
+			"category": "monitoring",
+			"description": "Sentry dashboard (Production)"
+		},
+		{
+			"url": "https://sentry.io/nextftcom/origami-usage-qa/",
+			"category": "monitoring",
+			"description": "Sentry dashboard (QA)"
+		},
+		{
+			"url": "https://financialtimes.splunkcloud.com/en-US/app/search/search?q=app%3Dorigami-usage-*",
+			"category": "monitoring",
+			"description": "Splunk (Production)"
+		}
+	]
+}

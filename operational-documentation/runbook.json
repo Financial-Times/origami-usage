@@ -1,0 +1,29 @@
+{
+	"name": "Origami Usage",
+	"description": "Display usage metrics about Origami components on Financial Times Group websites.",
+	"serviceTier": "Bronze",
+	"lifecycleStage": "Analysis",
+	"primaryURL": "https://origami-usage.in.ft.com",
+	"gitRepository": "https://github.com/Financial-Times/origami-usage",
+	"hostPlatform": "Heroku",
+	"primaryContact": {
+		"contact": [{
+			"dataItemID": "alicebartlett"
+		}]
+	},
+	"programme": {
+		"contact": [{
+			"dataItemID": "internalproducts"
+		}]
+	},
+	"productOwner": {
+		"contact": [{
+			"dataItemID": "alicebartlett"
+		}]
+	},
+	"technicalLead": {
+		"contact": [{
+			"dataItemID": "alicebartlett"
+		}]
+	}
+}
