@@ -17,6 +17,7 @@
 					<tr>
 						<th>Domain</th>
 						<th>Uses <a href="https://registry.origami.ft.com/components/o-footer">o-footer</a>?</th>
+						<th>Behind S3O?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/cookies">cookie policy</a>?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/copyright/copyright-policy">copyright policy</a>?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/privacy">privacy policy</a>?</th>
@@ -37,6 +38,11 @@
 						<td><a href="http://{{domain}}">{{domain}}</a></td>
 						{{#if containsOFooter}}
 							<td>{{containsOFooter}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if behindS3O}}
+							<td>{{behindS3O}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
