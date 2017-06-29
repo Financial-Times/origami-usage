@@ -15,7 +15,8 @@ const options = {
 	dynPassword: process.env.DYN_PASSWORD,
 	log: console,
 	name: 'Origami Usage',
-	workers: process.env.WEB_CONCURRENCY || 1
+	workers: process.env.WEB_CONCURRENCY || 1,
+	cmdbKey: process.env.CMDB_KEY
 };
 
 function startWorker(id) {

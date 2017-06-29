@@ -16,15 +16,19 @@
 				<thead>
 					<tr>
 						<th>Domain</th>
-						<th>Uses <a href="https://registry.origami.ft.com/components/o-footer">o-footer</a></th>
-						<th>Links to <a href="https://help.ft.com/help/legal-privacy/cookies">cookie policy</a></th>
-						<th>Links to <a href="https://help.ft.com/help/legal-privacy/copyright/copyright-policy">copyright policy</a></th>
-						<th>Links to <a href="https://help.ft.com/help/legal-privacy/privacy">privacy policy</a></th>
-						<th>Links to <a href="https://help.ft.com/help/legal/slavery-statement">slavery statement</a></th>
-						<th>Links to <a href="https://help.ft.com/help/legal-privacy/terms-conditions">terms of service</a></th>
+						<th>Uses <a href="https://registry.origami.ft.com/components/o-footer">o-footer</a>?</th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/cookies">cookie policy</a>?</th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/copyright/copyright-policy">copyright policy</a>?</th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/privacy">privacy policy</a>?</th>
+						<th>Links to <a href="https://help.ft.com/help/legal/slavery-statement">slavery statement</a>?</th>
+						<th>Links to <a href="https://help.ft.com/help/legal-privacy/terms-conditions">terms of service</a>?</th>
 						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Size of page</th>
-						<th>real page</th>
-						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">score</th>
+						<th>Real page?</th>
+						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Score</th>
+						<th>Is in CMDB?</th>
+						<th>System code</th>
+						<th>Dewey URL</th>
+						<th>Product Owner</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -64,6 +68,26 @@
 						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{bodyLength}}</td>
 						<td>{{realPage}}</td>
 						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{score}}</td>
+						{{#if isInCMDB}}
+							<td>{{isInCMDB}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if systemCode}}
+							<td>{{systemCode}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if deweyURL}}
+							<td>{{deweyURL}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+						{{#if productOwnerName}}
+							<td>{{productOwnerName}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
 					</tr>
 					{{/data}}
 				</tbody>
