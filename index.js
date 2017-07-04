@@ -16,7 +16,11 @@ const options = {
 	log: console,
 	name: 'Origami Usage',
 	workers: process.env.WEB_CONCURRENCY || 1,
-	cmdbKey: process.env.CMDB_KEY
+	cmdbKey: process.env.CMDB_KEY,
+	s3BucketName: process.env.AWS_BUCKET_NAME,
+	awsAccessKeyId: process.env.AWS_ACCESS_KEY_ID,
+	awsSecretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+	awsRegion: process.env.AWS_REGION
 };
 
 function startWorker(id) {
