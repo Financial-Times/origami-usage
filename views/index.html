@@ -4,7 +4,7 @@
 			<h1>Check origami usage across FT products</h1>
 
 			{{#if completed}}
-				<p>Scan completed.</p>
+				<p>Checked {{numberOfDomains}} domains/subdomains, found {{numberOfRealSites}} real sites, listed below.</p>
 			{{else}}
 				{{#if numberOfDomainsToScan}}
 					<p>Scan currently in progress. {{numberOfDomainsToScan}} still to be scanned. Please refresh the page to view more results</p>
@@ -16,8 +16,10 @@
 				<thead>
 					<tr>
 						<th>Domain</th>
+						<th>System code</th>
+						<th>Product Owner</th>
+						<th>Is in CMDB?</th>
 						<th>Uses <a href="https://registry.origami.ft.com/components/o-footer">o-footer</a>?</th>
-						<th>Behind S3O?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/cookies">cookie policy</a>?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/copyright/copyright-policy">copyright policy</a>?</th>
 						<th>Links to <a href="https://help.ft.com/help/legal-privacy/privacy">privacy policy</a>?</th>
@@ -26,71 +28,80 @@
 						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Size of page</th>
 						<th>Real page?</th>
 						<th data-o-table-data-type="numeric" class="o-table__cell--numeric">Score</th>
-						<th>Is in CMDB?</th>
-						<th>System code</th>
-						<th>Dewey URL</th>
-						<th>Product Owner</th>
+						<th>Behind S3O?</th>
 					</tr>
 				</thead>
 				<tbody>
 					{{#data}}
 					<tr>
 						<td><a href="http://{{domain}}">{{domain}}</a></td>
-						{{#if containsOFooter}}
-							<td>{{containsOFooter}}</td>
+
+						{{#if systemCode}}
+							{{#if deweyURL}}
+								<td><a href="{{deweyURL}}">{{systemCode}}</a></td>
+							{{else}}
+								<td>{{systemCode}}</td>
+							{{/if}}
 						{{else}}
 							<td>---</td>
 						{{/if}}
-						{{#if behindS3O}}
-							<td>{{behindS3O}}</td>
+
+						{{#if productOwnerName}}
+							<td>{{productOwnerName}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
-						{{#if oFooterContainsCookies}}
-							<td>{{oFooterContainsCookies}}</td>
-						{{else}}
-							<td>---</td>
-						{{/if}}
-						{{#if oFooterContainsCopyright}}
-							<td>{{oFooterContainsCopyright}}</td>
-						{{else}}
-							<td>---</td>
-						{{/if}}
-						{{#if oFooterContainsPrivacyPolicy}}
-							<td>{{oFooterContainsPrivacyPolicy}}</td>
-						{{else}}
-							<td>---</td>
-						{{/if}}
-						{{#if oFooterContainsSlavery}}
-							<td>{{oFooterContainsSlavery}}</td>
-						{{else}}
-							<td>---</td>
-						{{/if}}
-						{{#if oFooterContainsTermsOfService}}
-							<td>{{oFooterContainsTermsOfService}}</td>
-						{{else}}
-							<td>---</td>
-						{{/if}}
-						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{bodyLength}}</td>
-						<td>{{realPage}}</td>
-						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{score}}</td>
+
 						{{#if isInCMDB}}
 							<td>{{isInCMDB}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
-						{{#if systemCode}}
-							<td>{{systemCode}}</td>
+
+						{{#if containsOFooter}}
+							<td>{{containsOFooter}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
-						{{#if deweyURL}}
-							<td>{{deweyURL}}</td>
+
+						{{#if oFooterContainsCookies}}
+							<td>{{oFooterContainsCookies}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
-						{{#if productOwnerName}}
-							<td>{{productOwnerName}}</td>
+
+						{{#if oFooterContainsCopyright}}
+							<td>{{oFooterContainsCopyright}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+
+						{{#if oFooterContainsPrivacyPolicy}}
+							<td>{{oFooterContainsPrivacyPolicy}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+
+						{{#if oFooterContainsSlavery}}
+							<td>{{oFooterContainsSlavery}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+
+						{{#if oFooterContainsTermsOfService}}
+							<td>{{oFooterContainsTermsOfService}}</td>
+						{{else}}
+							<td>---</td>
+						{{/if}}
+
+						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{bodyLength}}</td>
+
+						<td>{{realPage}}</td>
+
+						<td data-o-table-data-type="numeric" class="o-table__cell--numeric">{{score}}</td>
+
+						{{#if behindS3O}}
+							<td>{{behindS3O}}</td>
 						{{else}}
 							<td>---</td>
 						{{/if}}
