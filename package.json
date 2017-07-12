@@ -16,7 +16,7 @@
     "url": "https://github.com/Financial-Times/origami-usage.git"
   },
   "engines": {
-    "node": "^8",
+    "node": "^8.1.4",
     "npm": "^4"
   },
   "main": "./lib/service.js",
