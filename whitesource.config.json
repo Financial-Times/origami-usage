@@ -1,0 +1,7 @@
+{
+	"checkPolicies": true,
+	"projectName": "usage-dashboard",
+	"productName": "usage-dashboard",
+	"devDep": false,
+	"failOnError": true
+}
