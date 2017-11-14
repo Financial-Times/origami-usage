@@ -21,7 +21,8 @@
   },
   "main": "./lib/service.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "whitesource": "whitesource run"
   },
   "dependencies": {
     "@financial-times/health-check": "^1.2.1",
@@ -48,6 +49,7 @@
     "nyc": "^11.2.1",
     "proclaim": "^3",
     "sinon": "^4.0.1",
-    "supertest": "^3"
+    "supertest": "^3",
+    "whitesource": "^1.1.1"
   }
 }
