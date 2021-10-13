@@ -2,7 +2,7 @@
 Origami Usage
 ======================
 
-**:warning: This is a work in progress :warning:**
+**Deprecated: This project was a work in progress, and then it was archived.**
 
 Display usage metrics about Origami components on Financial Times Group websites.
 
